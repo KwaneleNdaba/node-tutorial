@@ -17,4 +17,5 @@ const readContentFromFile = fs.readFileSync(filePath, "utf8")
 
 console.log("File Content: ", readContentFromFile);
 
-fs.appendFileSync(filePath, )
+fs.appendFileSync(filePath, "\nThis is a new line added to this file");
+console.log("New file content added");
