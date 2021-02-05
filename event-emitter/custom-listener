@@ -1,0 +1,21 @@
+const EventEmitter = require("events");
+
+
+class myCustomEmitter extends EventEmitter{
+    constructor() {
+        super();
+        this.greeting = "Hello"
+    }
+    greet(name){
+        this.emit("greeting", `${this.greeting}, ${name}`)
+    }
+}
+
+const mycustomEmitter = new myCustomEmitter();
+
+mycustomEmitter.on("greeting", (input) => {
+    console.log("Greeting event", input)
+})
+
+
+mycustomEmitter.greet("Kwanele Ndaba")
